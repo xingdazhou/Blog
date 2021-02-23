@@ -1,0 +1,72 @@
+a {
+    text-decoration: none;
+    color: #409eff;
+}
+
+@media screen and(min-width: 320px)and(max-width: 359px) {
+    html {
+        font-size: 12.8px;
+    }
+}
+
+@media screen and(min-width: 360px)and(max-width: 374px) {
+    html {
+        font-size: 14.4px;
+    }
+}
+
+@media screen and(min-width: 375px)and(max-width: 385px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and(min-width: 386px)and(max-width: 392px) {
+    html {
+        font-size: 15.44px;
+    }
+}
+
+@media screen and(min-width: 393px)and(max-width: 400px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and(min-width: 401px)and(max-width: 414px) {
+    html {
+        font-size: 16.48px;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: white;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 2146909 */
+    src: url('//at.alicdn.com/t/font_2146909_0cl2xh8f1eje.eot');
+    src: url('//at.alicdn.com/t/font_2146909_0cl2xh8f1eje.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_2146909_0cl2xh8f1eje.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_2146909_0cl2xh8f1eje.woff') format('woff'),
+    url('//at.alicdn.com/t/font_2146909_0cl2xh8f1eje.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_2146909_0cl2xh8f1eje.svg#iconfont') format('svg');
+  }
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

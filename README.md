@@ -1,24 +1,34 @@
-# vue-blog
+# 阿达同学的个人博客
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 项目地址：http://xiaoxingda.com
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 简介
+
+项目基于Vue全家桶 + Element-UI 技术栈的个人博客。后端使用Koa2 + MongoDB，使用了highlight.js实现博客代码高亮，使用下拉加载配合mongodb查询减少首次网络请求数量加快响应，使用nginx反向代理解决跨域。项目部署在阿里云服务器上。
+
+## 功能
+
+1. 首页
+1. 文章列表
+1. 时间线
+1. 项目
+1. 历程
+1. 关于
+1. 护眼
+1. 侧边栏指定文章
+

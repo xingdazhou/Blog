@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon " type="images/x-icon" href="./img/Z.jpg">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .app {
+            /* 外层设置为可是窗口的大小 */
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .header {
+            height: 60px;
+            color: rgba(255, 255, 255, 0.45);
+            background-color: #293c55;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding-top: 60px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+            height: 100%;
+            overflow: auto;
+            /* padding:20px; */
+            box-sizing: border-box;
+            background: #293c55;
+            color: #666;
+
+        }
+
+        .main {
+            height: 100%;
+            /* padding: 20px; */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 100%;
+            color: #fff;
+        }
+
+        ul li {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        ul li:hover {
+            background: #162436;
+        }
+
+        ul li:first-child {
+            margin-top: 0;
+            cursor: initial;
+            background: #000;
+        }
+
+        .card {
+            width: 100%;
+            min-height: 1000px;
+            box-shadow: 0 0 5px 1px #666;
+            border-radius: 4px;
+
+            margin-bottom: 600px;
+            padding: 20px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .top_title {
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .div_item {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>博客后台管理</h1>
+        </header>
+        <div class="container">
+            <aside class="left">
+                <div class="left_con">
+                    <ul>
+                        <li>上传类型</a></li>
+                        <li><a href="#article">文章</a></li>
+                        <!-- <li><a href="#timeline">时间线</a></li> -->
+                        <li><a href="#myproject">项目</a></li>
+                        <li><a href="#licheng">历程</a></li>
+                        <li><a href="#about">关于</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="main">
+                <!-- 运用锚点，加上超出主区域就影长实现，显示和隐藏 -->
+                <div class="article card" id="article">
+                    <div class="top_title">Article上传</div>
+                    <div class="div_item">
+                        文章：<input type="file" name="" id="" class="article_wenzhang">
+                    </div>
+                    <div class="div_item">
+                        图片：<input type="file" name="" id="" class="article_img">
+                    </div>
+                    <div class="div_item">
+                        描述：<input type="text" name="" id="" class="article_desc">
+                    </div>
+                    <div class="div_item">
+                        时间：<input type="text" name="" id="" class="article_time">
+                    </div>
+                    <div class="div_item">
+                        year：<input type="text" name="" id="" class="article_year">
+                    </div>
+                    <div class="div_item">
+                        tag：<input type="text" name="" id="" class="article_tag">
+                    </div>
+                    <button class='article_button'>点击上传</button>
+
+
+                </div>
+                <!-- <div class="timeline card" id="timeline">
+                    <div class="top_title">TimeLine上传</div>
+                    <div class="div_item">
+                        选择年份：<input class="timeline_year" name="year" type="date">
+                    </div>
+                    <div class="div_item">
+                        选择文件时间：<input class="timeline_time" name="time" type="date">
+                    </div>
+                    <div class="div_item">
+                        <input class='timeline_file' type="file" name="myfile" id="file">
+                    </div>
+                    <button class='timeline_button'>点击上传</button>
+
+                </div> -->
+                <div class="myproject card" id="myproject">
+                    <div class="top_title">MyProject上传</div>
+                    <div class="div_item">
+                        项目图片：<input class="myproject_img" type="file" name="" id="">
+                    </div>
+                    <div class="div_item">
+                        项目名：<input class="myproject_title" type="text">
+                    </div>
+                    <div class="div_item">
+                        历经时间：<input type="text" class="myproject_time" placeholder="2020-10-8 ~ 2020-12-1">
+                    </div>
+                    <div class="div_item">
+                        github地址：<input class="myproject_git" type="text">
+                    </div>
+                    <button class='myproject_button'>点击上传</button>
+
+                </div>
+                <div class="licheng card" id="licheng">
+                    <div class="top_title">历程上传</div>
+                    <div class="div_item">项目名：<input class="licheng_title" type="text" placeholder="请输入项目名称"></div>
+                    <div class="div_item">描述：<textarea class="licheng_content" placeholder="请输入项目简单描述" name="" id=""
+                            cols="30" rows="10"></textarea></div>
+                    <div class="div_item">启动项目时间：<input type="text" class="licheng_top_time"
+                            placeholder="2020-12-1 20:28"></div>
+                    <div class="div_item">项目历经时间：<input type="text" class="licheng_bottom_time"
+                            placeholder="2020-10-8 ~ 2020-12-1"></div>
+                    <div class="div_item">完成是否完成：<input type="checkbox" class="licheng_istrue" name="" id=""></div>
+                    <button class='licheng_button'>点击上传</button>
+                </div>
+                <div class="about card" id="about">
+                    <div class="top_title">About上传</div>
+                    <input type="file" class="about_file">
+                    进度：<progress class="about_process" value="0" max='100'></progress><span class='about_pre'>0%</span>
+                    速度：<span class='about_speed'>0b/s</span>
+                    <button class='about_botton'>点击上传</button>
+                    <button class='about_botton1'>取消上传</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let oul = document.querySelector('ul')
+        let btn_article = document.querySelector('.article_button')
+        let btn_timeline = document.querySelector('.timeline_button')
+        let btn_myproject = document.querySelector('.myproject_button')
+        let btn_licheng = document.querySelector('.licheng_button')
+        let btn_about = document.querySelector('.about_botton')
+
+        oul.onclick = function (e) {
+            if (e.target.textContent !== '上传类型' && e.target.tagName !== 'UL')
+                console.log(e.target.textContent)
+            // 根据分类textContent来分别调用不同函数上传
+        }
+
+        btn_article.onclick = function () {
+            let wenzhang = document.querySelector('.article_wenzhang').files[0]
+            let img = document.querySelector('.article_img').files[0]
+            let desc = document.querySelector('.article_desc').value
+            let time = document.querySelector('.article_time').value
+            let year = document.querySelector('.article_year').value
+            let tag = document.querySelector('.article_tag').value
+            console.log(wenzhang, img, desc, time, year, tag)
+            let xhr = new XMLHttpRequest()
+            xhr.open('post', '/uploadArticle', true)
+            let form = new FormData()
+            form.append('wenzhang', wenzhang)
+            form.append('img', img)
+            form.append('other', JSON.stringify({
+                desc,
+                time,
+                year,
+                tag
+            }))
+            xhr.onreadystatechange = function () {
+                // 这步为判断服务器是否正确响应
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // alert(xhr.responseText);
+                    console.log(xhr.responseText)
+                }
+            };
+            xhr.send(form)
+        }
+
+        btn_timeline.onclick = function () {
+            let year = document.querySelector('.timeline_year')
+            let time = document.querySelector('.timeline_time')
+
+            let xhr = new XMLHttpRequest()
+            xhr.open('post', '/uploadTimeLine', true)
+            let form = new FormData()
+            let file = document.querySelector('.timeline_file').files[0]
+            form.append('myfile', file)
+            xhr.onreadystatechange = function () {
+                // 这步为判断服务器是否正确响应
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // alert(xhr.responseText);
+                    console.log(xhr.responseText)
+                    resolve(xhr.responseText)
+                }
+            };
+        }
+
+        // 项目搞定
+        btn_myproject.onclick = function () {
+            let myproject_img = document.querySelector('.myproject_img')
+            let myproject_title = document.querySelector('.myproject_title')
+            let myproject_time = document.querySelector('.myproject_time')
+            let myproject_git = document.querySelector('.myproject_git')
+            let img = myproject_img.value
+            let title = myproject_title.value
+            let time = myproject_time.value
+            let git = myproject_git.value
+            console.log(img + "\n" + title + '\n' + time + "\n" + git)
+
+
+            let p1 = new Promise((resolve, reject) => {
+                let xhr = new XMLHttpRequest()
+                xhr.open('post', '/uploadMyProject', true)
+                let form = new FormData()
+                let file = document.querySelector('.myproject_img').files[0]
+                form.append('myfile', file)
+                xhr.onreadystatechange = function () {
+                    // 这步为判断服务器是否正确响应
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        // alert(xhr.responseText);
+                        console.log(JSON.parse(xhr.responseText))
+                        resolve(JSON.parse(xhr.responseText))
+                    }
+                };
+                xhr.send(form)
+
+            })
+            p1.then((result) => {
+                return new Promise((resolve, reject) => {
+                    let xhr = new XMLHttpRequest()
+                    xhr.open('post', '/uploadMyProject', true)
+                    xhr.onreadystatechange = function () {
+                        // 这步为判断服务器是否正确响应
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            resolve(xhr.responseText)
+                        }
+                    };
+                    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                    xhr.send(
+                        `absoluteUrl=${result}&title=${title}&time=${time}&github=${git}`
+                    );
+                })
+            }).then((res) => {
+                alert(res);
+            })
+
+
+            // 发送并接受返回值
+
+            // 如果想要使用post提交数据,必须添加此行
+            // xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // 将数据通过send方法传递
+            // xhr.send(
+            //     `form=${form}&title=${title}&time=${time}&git=${git}`
+            // );
+
+
+
+        }
+
+        // 历程 搞定
+        btn_licheng.onclick = function uploadLiCheng() {
+            let licheng_title = document.querySelector('.licheng_title')
+            let licheng_content = document.querySelector('.licheng_content')
+            let licheng_top_time = document.querySelector('.licheng_top_time')
+            let licheng_bottom_time = document.querySelector('.licheng_bottom_time')
+            let licheng_istrue = document.querySelector('.licheng_istrue')
+            let title = licheng_title.value
+            let content = licheng_content.value
+            let topTime = licheng_top_time.value
+            let bottomTime = licheng_bottom_time.value
+            let isTrue = licheng_istrue.checked ? '#0bbd87' : ''
+            console.log(title)
+            console.log(content)
+            console.log(topTime)
+            console.log(bottomTime)
+            console.log(isTrue)
+            let xhr = new XMLHttpRequest()
+            xhr.open('post', '/uploadLiCheng', true)
+            // 如果想要使用post提交数据,必须添加此行
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // 将数据通过send方法传递
+            xhr.send(
+                `title=${title}&content=${content}&timestamp=${topTime}&footerTime=${bottomTime}&color=${isTrue}`
+            );
+            // 发送并接受返回值
+            xhr.onreadystatechange = function () {
+                // 这步为判断服务器是否正确响应
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText);
+                }
+            };
+
+        }
+
+        // About 搞定
+        btn_about.onclick = function uploadAbout() {
+            let xhr = new XMLHttpRequest()
+            let btn1 = document.querySelectorAll('.about_button1')
+            let pro = document.querySelector('.about_process')
+            let pre = document.querySelector('.about_pre')
+            let stime;
+            let sloaded;
+            let file = document.querySelector('.about_file').files[0]
+            let form = new FormData()
+            form.append('myfile', file)
+            xhr.open('post', '/uploadAbout', true)
+            xhr.onload = function () {
+                console.log(xhr.responseText)
+            }
+            xhr.upload.onloadstart = function () {
+                console.log('开始上传')
+                stime = new Date().getTime();
+                sloaded = 0;
+            }
+            xhr.upload.onprogress = function (e) {
+                console.log('正在上传')
+                let percent = (e.loaded / e.total * 100).toFixed(0)
+                console.log(percent + '%')
+                pre.textContent = percent + '%'
+                pro.value = percent
+
+                // 计算速率
+                let endTime = new Date().getTime();
+                let dTime = (endTime - stime) / 1000;
+
+                let dloaded = (e.loaded - sloaded);
+                let speed = dloaded / dTime;
+                stime = new Date().getTime()
+                sloaded = e.loaded
+                let unit = 'b/s';
+                if (speed / 1024 > 1) {
+                    unit = 'kb/s'
+                    speed = speed / 1024
+                }
+                if (speed / 1024 > 1) {
+                    unit = 'mb/s'
+                    speed / speed / 1024
+                }
+                document.querySelector('.about_speed').innerHTML = speed.toFixed(2) + unit
+            }
+            xhr.upload.onload = function () {
+                console.log('上传成功')
+            }
+            xhr.upload.onloadend = function () {
+                console.log('上传完成')
+            }
+            xhr.upload.onabort = function () {
+                console.log('取消上传')
+            }
+            xhr.send(form)
+
+            btn1.onclick = function () {
+                xhr.abort()
+            }
+        }
+    </script>
+</body>
+
+</html>
