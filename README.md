@@ -32,3 +32,15 @@ npm run build
 1. 护眼
 1. 侧边栏指定文章
 
+## 截图
+
+![image](https://github.com/xingdazhou/Blog/blob/master/gitPic/%E9%A6%96%E9%A1%B51.png)
+
+![image](https://github.com/xingdazhou/Blog/blob/master/gitPic/%E6%96%87%E7%AB%A0.png)
+
+![image](https://github.com/xingdazhou/Blog/blob/master/gitPic/%E6%96%87%E7%AB%A01.png)
+
+![image](https://github.com/xingdazhou/Blog/blob/master/gitPic/%E5%8E%86%E7%A8%8B.png)
+
+
+
